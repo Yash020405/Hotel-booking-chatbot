@@ -8,7 +8,13 @@ Welcome to the Hotel Booking Chatbot application, built using Express.js, OpenAI
 
 1. Navigate to the backend directory: `cd backend`
 2. Install dependencies: `npm install`
-3. Create a `.env` file in the backend directory and add your OpenAI API key:
+3. Create a `.env` file in the backend directory in this format :
+   ```
+   OPENAI_API_KEY=your_open_api_key
+   EMAIL_USER=your_email_address
+   EMAIL_PASS=your_email_password
+   ```
+   
 4. Start the backend server: `npm start`
 
 ### Frontend
@@ -30,15 +36,22 @@ Welcome to the Hotel Booking Chatbot application, built using Express.js, OpenAI
 Send a message to the chatbot and receive a response.
 
 Request body:
-```json
-{
+```
 "userId": "unique_user_id",
 "message": "I want to book a room"
-}
-Response :- {
+```
+Response :- 
+```
   "response": "Certainly! I'd be happy to help you book a room. Let me fetch the available room options for you."
-}
+```
 Testing :- 
+```
 curl -X POST http://localhost:3000/api/chat \
   -H "Content-Type: application/json" \
   -d '{"userId": "user123", "message": "I want to book a room"}'
+```
+
+
+# Demo Video
+
+https://drive.google.com/file/d/1YZjY4sSAutYpqmitU9WU3bVBZPapOv3x/view?usp=drive_link
